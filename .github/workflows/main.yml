@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'second-github-action/*'
+     
 jobs:
   test:
     runs-on: ubuntu-latest
