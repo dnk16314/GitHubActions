@@ -1,5 +1,5 @@
 name: Test Project
-on: push
+on: [push,worflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -28,4 +28,4 @@ jobs:
       - name: Build Project
         run: npm run build 
       - name: Deploy
-        run: echo "Deploying...."
+        run: echo "Deploying..."
