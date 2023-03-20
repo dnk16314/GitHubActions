@@ -1,5 +1,10 @@
 name: Test Project
-on: [push,worflow_dispatch]
+on: 
+  push:
+    branches:
+     - master
+    paths:
+      - 'second-github-action/*'
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -29,3 +34,4 @@ jobs:
         run: npm run build 
       - name: Deploy
         run: echo "Deploying..."
+ 
