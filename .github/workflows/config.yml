@@ -11,8 +11,7 @@ jobs:
         with:
           node-version: 18
       - name: Run tests
-        run: cd NodeJs
-        run: npm test
+        run: cd NodeJs/npm test
   # deploy:
   #   needs: test
   #   runs-on: ubuntu-latest
