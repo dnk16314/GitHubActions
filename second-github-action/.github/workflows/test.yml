@@ -7,6 +7,7 @@ on:
       - 'second-github-action/*'
 jobs:
   test:
+    if: ${{ github.event.pull_request.merged == true && (github.ref == 'master' || github.ref == 'develop' )}}
     runs-on: ubuntu-latest
     steps:
       - name: Get code 
@@ -20,6 +21,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code 
