@@ -1,9 +1,0 @@
-name: Firts Workflow
-on: workflow_dispatch
-jobs:
-  first-workflow-job:
-    runs-on:  ubuntu-latest
-    steps:
-      - name: Print greeting
-        run: echo "Hello world"
-       
