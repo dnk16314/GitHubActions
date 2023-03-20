@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'second-github-action/**'
 jobs:
   test:
     if: ${{ github.event.pull_request.merged == true && (github.ref == 'master' || github.ref == 'develop' )}}
