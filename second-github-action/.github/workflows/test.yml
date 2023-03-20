@@ -1,9 +1,8 @@
 name: Test Project
 on: 
-  pull_request:
-    types:
-      - closed
-
+  push:
+    branches:
+      - master
 jobs:
   test:
     if: ${{ github.event.pull_request.merged == true && (github.ref == 'master' || github.ref == 'develop' )}}
