@@ -11,18 +11,19 @@ jobs:
         with:
           node-version: 18
       - name: Run tests
+        run: cd NodeJs
         run: npm test
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Install NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Build project
-        run: npm run build
-      - name: Deploy
-        run: echo "Deploying ..."
+  # deploy:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Get code
+  #       uses: actions/checkout@v3
+  #     - name: Install NodeJS
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 18
+  #     - name: Build project
+  #       run: npm run build
+  #     - name: Deploy
+  #       run: echo "Deploying ..."
