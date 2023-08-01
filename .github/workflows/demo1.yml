@@ -3,7 +3,7 @@
 name: Demo1
 
 #Event(manually)
-on: worflow_dispatch
+on: workflow_dispatch
 
 #Jobs(any name:first-job)
 jobs:
