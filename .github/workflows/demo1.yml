@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Weclome Message
-        run: Welcome to GitHub Actions
+        run: echo "Welcome to GitHub Actions"
